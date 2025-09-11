@@ -1,3 +1,6 @@
+---@class HistoryFeature
+---@field allow_duplicates boolean
+
 ---@class PickersFeature
 ---@field enable boolean
 ---@field provider 'telescope'|'ui.select'|'fzf-lua'|'snacks'
@@ -16,6 +19,9 @@
 return {
   debug_level = vim.log.levels.DEBUG,
   features = {
+    history = {
+      allow_duplicates = true,
+    },
     pickers = {
       enable = true,
       provider = "telescope",
