@@ -196,10 +196,10 @@ Using [Lazy.nvim](https://github.com/foke/lazy.nvim)
   event = { "VeryLazy" },
   opts = {
     features = {
-      history = {
-        allow_duplicates = false,
-      },
       pickers = {
+        history = {
+          allow_duplicates = false,
+        },
         provider = "snacks", -- "snacks | telescope | fzf-lua | ui-select"
       },
     },
