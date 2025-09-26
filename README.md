@@ -197,10 +197,10 @@ Using [Lazy.nvim](https://github.com/foke/lazy.nvim)
   opts = {
     lsp_server = "phpactor", -- "phpactor | intelephense"
     features = {
-      history = {
-        allow_duplicates = false,
-      },
       pickers = {
+        history = {
+          allow_duplicates = false,
+        },
         provider = "snacks", -- "snacks | telescope | fzf-lua | ui-select"
       },
     },

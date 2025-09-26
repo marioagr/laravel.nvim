@@ -16,7 +16,7 @@ end
 
 function provider:boot(app)
   local group = vim.api.nvim_create_augroup("laravel.history", {})
-  local allows_duplicates = app("laravel.services.config")("features").history.allow_duplicates
+  local allows_duplicates = app("laravel.services.config")("features").pickers.history.allow_duplicates
 
   vim.api.nvim_create_autocmd({ "User" }, {
     group = group,
