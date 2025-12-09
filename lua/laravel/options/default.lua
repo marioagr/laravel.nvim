@@ -1,6 +1,10 @@
+---@class HistoryPicker
+---@field allow_duplicates boolean
+
 ---@class PickersFeature
 ---@field enable boolean
 ---@field provider 'telescope'|'ui.select'|'fzf-lua'|'snacks'
+---@field history HistoryPicker
 
 ---@class LaravelFeatures
 ---@field pickers PickersFeature
@@ -17,6 +21,9 @@ return {
   debug_level = vim.log.levels.DEBUG,
   features = {
     pickers = {
+      history = {
+        allow_duplicates = true,
+      },
       enable = true,
       provider = "telescope",
     },

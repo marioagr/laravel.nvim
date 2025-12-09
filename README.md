@@ -177,6 +177,7 @@ Using [Lazy.nvim](https://github.com/foke/lazy.nvim)
     { "<leader>lc", function() Laravel.pickers.commands() end,             desc = "Laravel: Open Commands Picker" },
     { "<leader>lo", function() Laravel.pickers.resources() end,            desc = "Laravel: Open Resources Picker" },
     { "<leader>lp", function() Laravel.commands.run("command_center") end, desc = "Laravel: Open Command Center" },
+    { '<leader>lH', function() Laravel.pickers.history() end,              desc = 'Laravel: Open Command History' },
     {
       "gf",
       function()
@@ -197,6 +198,9 @@ Using [Lazy.nvim](https://github.com/foke/lazy.nvim)
   opts = {
     features = {
       pickers = {
+        history = {
+          allow_duplicates = false,
+        },
         provider = "snacks", -- "snacks | telescope | fzf-lua | ui-select"
       },
     },
