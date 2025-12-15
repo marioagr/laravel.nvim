@@ -38,13 +38,19 @@ The plugin offers completion for several elements of the code like
 The completion is written for cmp, and is register with the name `laravel` so it can be added
 to your config.
 
-For blink you can use [compat](https://github.com/Saghen/blink.compat)
+If you use [blink.cmp](https://github.com/saghen/blink.cmp) it needs to be [configured as a source](https://cmp.saghen.dev/configuration/sources.html)
 ```lua
-laravel = {
-    name = "laravel",
-    module = "blink.compat.source",
-    score_offset = 95, -- show at a higher priority than lsp
-},
+sources = {
+  default = { 'lsp', 'path', 'snippets', 'buffer', 'laravel' },
+  -- ...
+  providers = {
+    laravel = {
+        name = 'Laravel.nvim',
+        module = 'laravel.extensions.completion.blink',
+        score_offset = 95, -- show at a higher priority than lsp
+    },
+  }
+}
 ```
 
 ## Actions
