@@ -167,6 +167,10 @@ Using [Lazy.nvim](https://github.com/foke/lazy.nvim)
     "nvim-lua/plenary.nvim",
     "nvim-neotest/nvim-nio",
   },
+  ft = { "php", "blade" },
+  event = {
+    "BufEnter composer.json",
+  },
   cmd = { "Laravel" },
   keys = {
     { "<leader>ll", function() Laravel.pickers.laravel() end,              desc = "Laravel: Open Laravel Picker" },
@@ -196,7 +200,6 @@ Using [Lazy.nvim](https://github.com/foke/lazy.nvim)
       noremap = true,
     },
   },
-  event = { "VeryLazy" },
   opts = {
     features = {
       pickers = {
